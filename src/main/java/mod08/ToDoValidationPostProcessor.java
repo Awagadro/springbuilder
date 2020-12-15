@@ -22,8 +22,7 @@ public class ToDoValidationPostProcessor implements BeanPostProcessor {
 				try {
 					field.setAccessible(true);
 					String input = (String) field.get(bean);
-					BracketChecker checker = new BracketChecker();
-					checker.getResult(input);
+					BracketChecker.getResult(input);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

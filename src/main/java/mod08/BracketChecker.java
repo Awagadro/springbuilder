@@ -19,11 +19,11 @@ public class BracketChecker {
 		BracketChecker.st = st;
 	}
 
-	public boolean getResult(String input) throws BracketException {
+	public static boolean getResult(String input) throws BracketException {
 		String filtered = getFilteredBrackets(input);
 		boolean result = isBalanced(filtered, "");
 		if (result == false) {
-			throw new BracketException("неправильная последовательность скобок");
+			throw new BracketException("неправильная последовательность скобок: " + input);
 		}
 		System.out.println("Автоматическая проверка расстановки скобок: " + result);
 		return result;
